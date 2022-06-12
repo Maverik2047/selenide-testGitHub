@@ -19,7 +19,7 @@ public class SelenideRepositoryTest extends TestBase {
 //        Откройте страницу SoftAssertions, проверьте что внутри есть пример кода для JUnit5
 
         searchPage.openPage()
-                .selenideSearch()
+                .selenideSearch("Selenide")
                 .openSelenideProject()
                 .openWiki()
                 .checkResult("SoftAssertions");

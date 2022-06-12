@@ -14,8 +14,8 @@ public class SearchPage extends ResultComponents {
         return this;
     }
 
-    public SearchPage selenideSearch() {
-        $(".form-control").setValue("Selenide").pressEnter();
+    public SearchPage selenideSearch(String value) {
+        $(".form-control").setValue(value).pressEnter();
         return this;
     }
 public SearchPage openSelenideProject(){
