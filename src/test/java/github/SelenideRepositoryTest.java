@@ -2,12 +2,14 @@ package github;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 
 public class SelenideRepositoryTest extends TestBase {
 
+    @DisplayName("Найти страницу 'SoftAssertions'")
     @Test
     void findSoftAssertions() {
 //        Откройте страницу Selenide в Github
@@ -21,9 +23,8 @@ public class SelenideRepositoryTest extends TestBase {
                 .openWiki()
                 .checkResult("SoftAssertions");
 
-
     }
-
+    @DisplayName("Откройте страницу SoftAssertions, проверьте что внутри есть пример кода для JUnit5")
     @Test
     void softAssertionsShouldHaveJUnit5Example() {
         Selenide.open("selenide/selenide/wiki/SoftAssertions");
