@@ -27,5 +27,9 @@ public SearchPage openWiki(){
     $(".Box-row.wiki-more-pages-link").$(byText("Show 2 more pages…")).click();
     return this;
 }
+public SearchPage openSoftAssertions(){
+    Selenide.open("selenide/selenide/wiki/SoftAssertions");
+    return this;
+}
 
 }
